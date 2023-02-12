@@ -32,7 +32,7 @@ listItems();
 
 // new function empty
 function empty (){
-    basket =[]; 
+    basket =[];
 }
 
 // clear the list array
@@ -76,3 +76,25 @@ console.log(basket);
 console.log(isFull()); // true
 console.log(addItem("milk")); // false
 console.log(basket); 
+
+// Array built in function
+function removeItem(item){
+    let index = basket.indexOf(item);
+    if (index === -1){
+        return null;
+    }
+    let removeItem = basket.splice(index, 1);
+    return removeItem[0];
+}
+//Implementing IndexOf, and splice()
+console.log(basket);
+let id = 2;// by use of index(known)
+const removedItem = basket.splice(id, 1);
+console.log(basket);
+
+// unknown index
+let id1 = basket.indexOf('banana');
+let removedItem2 = basket.splice(id1, 1);
+console.log(basket);
+
+    
