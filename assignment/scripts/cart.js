@@ -32,7 +32,7 @@ listItems();
 
 // new function empty
 function empty (){
-    basket =[];
+    basket =[]; 
 }
 
 // clear the list array
@@ -49,3 +49,30 @@ function isFull(){
 //Testing the isFull function
 console.log(basket.length);
 console.log(`Basket is full (expect false):`, isFull() );
+
+// Update addItem function
+function addItem(item){
+    if(!isFull() ){
+        basket.push(item);
+        return true;
+    }
+    else{
+        return false;
+    }
+}
+// testing the addItem
+console.log(basket);
+console.log(addItem("latte")); // true
+console.log(basket);
+console.log(addItem("banana")); // true
+console.log(basket);
+console.log(addItem("syrup")); // true
+console.log(basket);
+console.log(isFull()); // false
+console.log(addItem("coffee")); // true
+console.log(basket);
+console.log(addItem("scones")); // true
+console.log(basket);
+console.log(isFull()); // true
+console.log(addItem("milk")); // false
+console.log(basket); 
