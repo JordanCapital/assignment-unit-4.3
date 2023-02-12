@@ -34,3 +34,18 @@ listItems();
 function empty (){
     basket =[];
 }
+
+// clear the list array
+console.log('The empty array list is:');
+empty();
+
+// Stretch Goals
+
+
+// function isFull() 
+function isFull(){
+    return basket.length >= maxItems;
+}
+//Testing the isFull function
+console.log(basket.length);
+console.log(`Basket is full (expect false):`, isFull() );
